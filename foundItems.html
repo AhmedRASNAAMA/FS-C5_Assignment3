@@ -1,0 +1,15 @@
+<div class="card" ng-repeat="item in list.found">
+    <div class="card-header align-middle">
+        {{ item.short_name }} : {{ item.name }}
+        <span>
+            <button class="btn btn-primary float-right" ng-click="list.onRemove({index: $index});">
+                Don't want this one!
+            </button>
+        </span>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+            {{item.description}}
+        </p>
+    </div>
+</div>
