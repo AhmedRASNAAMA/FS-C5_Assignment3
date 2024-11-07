@@ -46,6 +46,7 @@
     
           item.getItems = function () {
             item.nothingFound = "";
+            item.IsEmpty= true;
               if(item.found.length !== 0) {
                   item.found.length = 0;
               }
@@ -63,12 +64,16 @@
                           };
                       });
                   });
+
+                  if (item.found.length === 0) {
+                        item.IsEmpty= true;
+                    } else { item.IsEmpty= false;}
               })
               .catch(function(error){
                   console.log(error)
               })
           }
-    
+
           item.removeItem = function(itemIndex){
               item.found.splice(itemIndex, 1);
           };
