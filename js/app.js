@@ -46,7 +46,7 @@
     
           item.getItems = function () {
             item.nothingFound = "";
-            item.IsEmpty= true;
+            item.isEmpty= true;
               if(item.found.length !== 0) {
                   item.found.length = 0;
               }
@@ -66,8 +66,8 @@
                   });
 
                   if (item.found.length === 0) {
-                        item.IsEmpty= true;
-                    } else { item.IsEmpty= false;}
+                        item.isEmpty= true;
+                    } else { item.isEmpty= false;}
               })
               .catch(function(error){
                   console.log(error)
